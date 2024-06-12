@@ -1,0 +1,27 @@
+{
+    "name": "acf/calculator-block",
+    "title": "Calculator Block",
+    "description": "A calculator block.",
+    "category": "widgets",
+    "icon": "calculator",
+    "keywords": [
+        "calculator",
+        "block"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "calculator-block.php"
+    },
+    "script": [
+        "file:./js/jquery.min.js",
+        "file:./js/math.min.js",
+        "file:./js/script.js"
+    ],
+    "style": [
+        "file:./css/style.css"
+    ],
+    "supports": {
+        "anchor": true,
+        "jsx": true
+    }
+}

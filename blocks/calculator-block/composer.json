@@ -1,0 +1,18 @@
+{
+    "name": "kolektyw-kreatywny/calculator-block",
+    "description": "Composer for calculator block.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "KolektywKreatywny\\CalculatorBlock\\": "class/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Aleksander Podsiadło",
+            "email": "bufostudio@gmail.com"
+        }
+    ],
+    "require": {}
+}

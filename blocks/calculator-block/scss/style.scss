@@ -1,0 +1,75 @@
+.calculator {
+    width: 100%;
+    max-width: 295px;
+    mix-blend-mode: difference;
+    font-size: 1.5rem;
+
+    &__calculations {
+        font-size: 2rem;
+        padding: 1rem;
+        color: #41374d;
+    }
+
+    &__result {
+        padding: 1rem;
+        height: 4rem;
+    }
+
+    &__buttonRow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.5rem;
+
+        .button_cancel::before {content: "C"}
+        .button_save::before {content: "S"}
+        .button_division::before {content: "/"}
+
+        .button_7::before {content: "7"}
+        .button_8::before {content: "8"}
+        .button_9::before {content: "9"}
+        .button_multiply::before {content: "*"}
+
+        .button_4::before {content: "4"}
+        .button_5::before {content: "5"}
+        .button_6::before {content: "6"}
+        .button_subtraction::before {content: "-"}
+
+        .button_1::before {content: "1"}
+        .button_2::before {content: "2"}
+        .button_3::before {content: "3"}
+        .button_addition::before {content: "+"}
+        
+        .button_0::before {content: "0"}
+        .button_result::before {content: "="}
+
+        &__button {
+            border-radius: 100%;
+            padding: 1rem;
+            text-align: center;
+            background-color: #e5e5e5;
+            cursor: pointer;
+
+            &--result {
+                background-color: #91a6b7;
+                color: #060507;
+            }
+
+            &--cancel {
+                color: #38c7cf;
+            }
+
+            &--action {
+                font-weight: bold;
+            }
+
+            &:hover {
+                background-color: #91a6b7;
+            }
+
+            &--disabled {
+                background-color: transparent!important;
+                cursor: default;
+            }
+        }
+    }
+}
