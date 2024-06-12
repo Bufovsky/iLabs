@@ -188,3 +188,58 @@ function register_acf_block()
 	register_block_type(get_template_directory() . '/blocks/calculator-block');
 }
 add_action('init', 'register_acf_block');
+
+add_action('acf/include_fields', 'acf_fields_init');
+function acf_fields_init()
+{
+	if (!function_exists('acf_add_local_field_group')) {
+		return;
+	}
+
+	acf_add_local_field_group(
+		array(
+			array(
+				"key" => "group_calculator-block",
+				"title" => "calculator",
+				"fields" => array(
+					array(
+						"key" => "field_calculator-block",
+						"label" => "background-color",
+						"name" => "background-color",
+						"aria-label" => "",
+						"type" => "color_picker",
+						"instructions" => "",
+						"required" => 0,
+						"conditional_logic" => 0,
+						"wrapper" => array(
+							"width" => "",
+							"class" => "",
+							"id" => ""
+						),
+						"default_value" => "",
+						"enable_opacity" => 1,
+						"return_format" => "string"
+					)
+				),
+				"location" => array(
+					array(
+						array(
+							"param" => "block",
+							"operator" => "==",
+							"value" => "acf/calculator-block"
+						)
+					)
+				),
+				"menu_order" => 0,
+				"position" => "normal",
+				"style" => "default",
+				"label_placement" => "top",
+				"instruction_placement" => "label",
+				"hide_on_screen" => "",
+				"active" => true,
+				"description" => "",
+				"show_in_rest" => 1
+			)
+		)
+	);
+}
